@@ -26,6 +26,10 @@
 
 ### Slice 1 - Sign Up
 
+        - create auth folder with index.html & auth.js
+        - add signUpUser func to fetch-utils.js
+        - add signUpForm.eventListener to auth.js
+
 ### Slice 2 - Sign in
 
 ### Slice 3 - Redirects (including signing out)
