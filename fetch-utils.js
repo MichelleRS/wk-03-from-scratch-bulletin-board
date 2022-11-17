@@ -10,3 +10,5 @@ export async function fetchPosts() {
 
     return response.data;
 }
+
+console.log(fetchPosts());
