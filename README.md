@@ -1,27 +1,55 @@
-## The Golden Rule:
+# Week 03 From Scratch Bulletin Board
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+## Project Planning
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+### HTML
 
-## Making a plan
+-   landing page: AUTH
+    -   sign up form with text inputs and submit button
+    -   sign in form with text inputs and submit button
+-   home page
+    -   link to CREATE page
+    -   button to sign out
+-   create page
+    -   form to input post information
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+### Events
 
-Additional considerations:
+-   landing page:
+    -   form submits
+-   home page:
+    -   window load event
+-   create page:
+    -   form submit
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+## Workflow
+
+### Slice 1 - Sign Up
+
+### Slice 2 - Sign in
+
+### Slice 3 - Redirects (including signing out)
+
+### Slice 4 - Create Page
+
+## Rubric
+
+### Home Page Requirements
+
+-   [] Styled list of posts 3
+-   [] Header with links (or buttons) to auth and create pages 1
+-   [] ASYNC: fetchPosts() : return array of posts from supabase 2
+
+### Auth Page Requirements
+
+-   [] Allows users to login or sign up for the application 4
+-   [] ASYNC: signUpUser - calls supabase signUp method and returns user 1
+-   [] ASYNC: signInUser - calls supabase signIn method and returns user 1
+
+### Create Page Requirements
+
+-   [] Displays a form for users to add post details 1
+-   [] Can only be loaded when logged in, otherwise redirects to the auth page 2
+-   [] Header with links (or buttons) to home 1
+-   [] Creates a new row in the database on form submit and redirects back to the home page 2
+-   [] ASYNC: createPost() creates a new row in the database 2
