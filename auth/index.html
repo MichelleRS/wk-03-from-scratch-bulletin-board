@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="auth.js"></script>
+
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
+
+    <body>
+        <header>
+            <h1>Michelle & Grey's Bulletin Board</h1>
+            <div id="nav" class="gutter-right">
+                <button id="auth-button">Login</button>
+                <button id="create">Create</button>
+            </div>
+        </header>
+
+        <main>
+            //sign-up container
+            <div class="auth-container">
+                <form action="" id="sign-up">
+                    <h2>Sign Up</h2>
+                    <label> Email <input type="email" name="email" id="sign-up-email" /> </label>
+                    <label
+                        >Password <input type="password" name="password" id="sign-up-password"
+                    /></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            //sign-in container
+            <div class="auth-container">
+                <form action="" id="sign-in">
+                    <h2>Sign In</h2>
+                    <label> Email <input type="email" name="email" id="sign-in-email" /> </label>
+                    <label
+                        >Password <input type="password" name="password" id="sign-in-password"
+                    /></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
