@@ -8,6 +8,7 @@ const bulletinBoard = document.getElementById('bulletin-board');
 const authButton = document.getElementById('auth-button');
 //create button
 const createButton = document.getElementById('create');
+
 /* State */
 
 /* Events */
