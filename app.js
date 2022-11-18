@@ -1,5 +1,5 @@
 /* Imports */
-import { fetchPosts } from './fetch-utils.js';
+import { fetchPosts, getUser, logout } from './fetch-utils.js';
 import { renderPost } from './render-utils.js';
 
 /* Get DOM Elements */
@@ -12,6 +12,22 @@ const createButton = document.getElementById('create');
 
 /* Events */
 window.addEventListener('load', async () => {
+    const user = await getUser();
+
+    // check for auth user
+    if (user) {
+        authButton.addEventListener('click', logout);
+        // change button to Logout
+        authButton.textContent = 'Logout';
+    } else {
+        //login/auth button eventListener
+        authButton.addEventListener('click', () => {
+            location.replace('/auth');
+        });
+        authButton.textContent = 'Login';
+    }
+
+    // getting posts from fetch-utils
     const posts = await fetchPosts();
 
     // display - loop, render, append
@@ -21,10 +37,6 @@ window.addEventListener('load', async () => {
     }
 });
 
-//login/auth button eventListener
-authButton.addEventListener('click', () => {
-    location.replace('/auth');
-});
 //create button eventListener
 /* Display Functions */
 

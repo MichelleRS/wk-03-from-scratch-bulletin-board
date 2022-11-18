@@ -44,6 +44,12 @@ export async function redirectIfLoggedIn() {
     }
 }
 
+// redirect for logout
+export async function logout() {
+    await client.auth.signOut();
+    return (window.location.href = '/');
+}
+
 //Create new post
 export async function createNewPost(newPost) {
     const response = await client.from('posts').insert(newPost);
