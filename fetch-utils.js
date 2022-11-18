@@ -43,3 +43,14 @@ export async function redirectIfLoggedIn() {
         location.replace('/');
     }
 }
+
+//Create new post
+export async function createNewPost(newPost) {
+    const response = await client.from('posts').insert(newPost);
+
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
+    }
+}
