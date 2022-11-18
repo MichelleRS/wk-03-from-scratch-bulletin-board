@@ -10,3 +10,10 @@ export async function fetchPosts() {
 
     return response.data;
 }
+
+// function for sign up
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+
+    return response.user;
+}
