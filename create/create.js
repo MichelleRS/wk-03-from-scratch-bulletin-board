@@ -1,10 +1,17 @@
 import { createNewPost, logout, getUser } from '../fetch-utils.js';
 
 // DOM ELEMENTS
+// home button
+const homeButton = document.getElementById('home-button');
 //auth button
 const authButton = document.getElementById('auth-button');
 // create post button
 const form = document.getElementById('create-post');
+
+// return user to home page
+homeButton.addEventListener('click', () => {
+    location.replace('/');
+});
 
 // button functions
 window.addEventListener('load', async () => {
