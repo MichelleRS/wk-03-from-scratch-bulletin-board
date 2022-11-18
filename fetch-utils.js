@@ -18,6 +18,13 @@ export async function signUpUser(email, password) {
     return response.user;
 }
 
+// function for sign in
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+
+    return response.user;
+}
+
 // get user info in database
 export async function getUser() {
     return client.auth.session() && client.auth.session().user;
