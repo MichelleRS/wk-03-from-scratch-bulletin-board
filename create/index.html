@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="create.js"></script>
+
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
+
+    <body>
+        <header>
+            <h1>Michelle & Grey's Bulletin Board</h1>
+            <div id="nav" class="gutter-right">
+                <button id="auth-button">Login</button>
+                <button id="create">Create</button>
+            </div>
+        </header>
+
+        <main>
+            <h2>Make a post!</h2>
+
+            <form id="create-post">
+                <!-- title -->
+                <label>Title: <input type="text" name="title" id="title" /></label>
+
+                <!-- description -->
+                <label
+                    >Description: <input type="text" name="description" id="description"
+                /></label>
+
+                <!-- contact -->
+                <label>Contact: <input type="text" name="contact" id="contact" /></label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
