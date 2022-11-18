@@ -17,3 +17,15 @@ export async function signUpUser(email, password) {
 
     return response.user;
 }
+
+// verify user info in database
+export async function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+// redirect for successful login
+export async function redirectIfLoggedIn() {
+    if (await getUser()) {
+        location.replace('/');
+    }
+}
