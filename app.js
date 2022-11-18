@@ -27,6 +27,11 @@ window.addEventListener('load', async () => {
         authButton.textContent = 'Login';
     }
 
+    //create button eventListener
+    createButton.addEventListener('click', () => {
+        location.replace('/create');
+    });
+
     // getting posts from fetch-utils
     const posts = await fetchPosts();
 
@@ -37,7 +42,6 @@ window.addEventListener('load', async () => {
     }
 });
 
-//create button eventListener
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
