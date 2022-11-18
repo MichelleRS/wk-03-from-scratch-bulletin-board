@@ -30,7 +30,13 @@ window.addEventListener('load', async () => {
 
     //create button eventListener
     createButton.addEventListener('click', () => {
-        location.replace('/create');
+        // send verified user to create page
+        if (user) {
+            location.replace('/create');
+            // send non users to auth/sign-up page
+        } else {
+            location.replace('/auth');
+        }
     });
 
     // getting posts from fetch-utils
