@@ -18,3 +18,5 @@ signUpForm.addEventListener('submit', async (e) => {
         console.error(user);
     }
 });
+
+//check auth

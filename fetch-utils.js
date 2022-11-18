@@ -18,9 +18,16 @@ export async function signUpUser(email, password) {
     return response.user;
 }
 
-// verify user info in database
+// get user info in database
 export async function getUser() {
     return client.auth.session() && client.auth.session().user;
+}
+
+//verify user info in database
+export async function checkAuth() {
+    const user = await getUser();
+
+    if (!user) location.replace('/auth/index.html');
 }
 
 // redirect for successful login
